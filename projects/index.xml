@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Marco E. Martin</title>
+    <link>https://marcoemartin.github.io/projects/</link>
+    <description>Recent content in Projects on Marco E. Martin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 02 Sep 2017 18:51:04 -0400</lastBuildDate>
+    
+	<atom:link href="https://marcoemartin.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
