@@ -6,10 +6,28 @@
     <description>Recent content on Marco E. Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 02 Sep 2017 19:29:13 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 11 Sep 2017 12:10:58 -0400</lastBuildDate>
     
 	<atom:link href="https://marcoemartin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syscall</title>
+      <link>https://marcoemartin.github.io/projects/syscall/</link>
+      <pubDate>Mon, 11 Sep 2017 12:10:58 -0400</pubDate>
+      
+      <guid>https://marcoemartin.github.io/projects/syscall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://marcoemartin.github.io/projects/</link>
+      <pubDate>Mon, 11 Sep 2017 12:02:15 -0400</pubDate>
+      
+      <guid>https://marcoemartin.github.io/projects/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Resume</title>
@@ -21,21 +39,13 @@
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://marcoemartin.github.io/projects/</link>
-      <pubDate>Sat, 02 Sep 2017 19:06:30 -0400</pubDate>
+      <title>Creating My First Hugo Website</title>
+      <link>https://marcoemartin.github.io/projects/createsite/</link>
+      <pubDate>Sat, 02 Sep 2017 18:51:04 -0400</pubDate>
       
-      <guid>https://marcoemartin.github.io/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Setting Up a Personal Website</title>
-      <link>https://marcoemartin.github.io/blog/test/</link>
-      <pubDate>Wed, 30 Aug 2017 11:43:16 -0400</pubDate>
-      
-      <guid>https://marcoemartin.github.io/blog/test/</guid>
-      <description>For some time now I have been wanting to create a personal website to show case my projects and let other people get to know me a little better.</description>
+      <guid>https://marcoemartin.github.io/projects/createsite/</guid>
+      <description>For some time now I have been wanting to create a personal website to show case my projects and as a way to let others get to know me a bit better. I finally found enough courage to do it when I learned about Hugo. Hugo is an open-source static site generator that uses the command line as its interface.
+It is super fast at building and launching a website, just look at that speed!</description>
     </item>
     
   </channel>

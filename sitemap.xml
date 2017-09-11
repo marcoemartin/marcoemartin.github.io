@@ -3,29 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://marcoemartin.github.io/projects/syscall/</loc>
+    <lastmod>2017-09-11T12:10:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcoemartin.github.io/projects/</loc>
+    <lastmod>2017-09-11T12:02:15-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://marcoemartin.github.io/resume/</loc>
     <lastmod>2017-09-02T19:29:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://marcoemartin.github.io/projects/</loc>
-    <lastmod>2017-09-02T19:06:30-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://marcoemartin.github.io/projects/</loc>
+    <loc>https://marcoemartin.github.io/projects/createsite/</loc>
     <lastmod>2017-09-02T18:51:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://marcoemartin.github.io/blog/test/</loc>
-    <lastmod>2017-08-30T11:43:16-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://marcoemartin.github.io/blog/</loc>
-    <lastmod>2017-08-30T11:43:16-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -35,7 +29,13 @@
   
   <url>
     <loc>https://marcoemartin.github.io/</loc>
-    <lastmod>2017-09-02T19:29:13-04:00</lastmod>
+    <lastmod>2017-09-11T12:10:58-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcoemartin.github.io/projects/</loc>
+    <lastmod>2017-09-11T12:10:58-04:00</lastmod>
     <priority>0</priority>
   </url>
   
