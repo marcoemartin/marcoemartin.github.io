@@ -7,7 +7,7 @@
     <meta name="author" content="map[]" />
     <meta name="description" content="Describe your website">
     <link rel="shortcut icon" type="image/x-icon" href="https://marcoemartin.github.io/img/favicon.ico">
-    <title>Syscall</title>
+    <title>Hijacking Syscall Table</title>
     <meta name="generator" content="Hugo 0.26" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://marcoemartin.github.io/css/main.css" />
@@ -51,7 +51,7 @@
       <div class="container">
         <div class="blog-post">
           <h3>
-            <strong><a href="https://marcoemartin.github.io/projects/syscall/">Syscall</a></strong>
+            <strong><a href="https://marcoemartin.github.io/projects/syscall/">Hijacking Syscall Table</a></strong>
           </h3>
         </div>
         <div class="blog-title">
@@ -64,7 +64,40 @@
         <div class="panel panel-default">
           <div class="panel-body">
             <div class="blogpost">
-              
+              <p>In my Operating Systems course we learned about Linux kernels and where then asked to hijack a basic kernel.</p>
+
+<h3><b>Some Background</b></h3>
+
+<p>Their are two kinds of processes - User mode and privileged processes. Since some commands could literally brick your computer or be used to steal personal information the OS prevents just any process to use certain commands unless they are privileged. For further detail refer to this <a href="https://technet.microsoft.com/en-us/library/cc938616.aspx">explanation</a>.</p>
+
+<p>The commands are further hidden by the fact that they are called internally by digits so that user processes can&rsquo;t &ldquo;guess&rdquo;, enter the System Call Table. This table is meant to decipher the command to its corresponding digit.</p>
+
+<p><h3><b>The Hijacking</b></h3>
+Our job was now to create a module that we could use to extend the functionality of the kernel and allow us to log every time we use a specific command. If everything works we will be able to call on our custom command (my_syscall) and add the system call we want to override as a parameter, such as read and it will log what it is about to do (in this case read) then execute read. In a sense we are creating a logger for system calls that can be executed from the user space.</p>
+
+<p>That is the main purpose of the module but that is not the only thing we are required to do. We also need to create the following functionality.
+<ul>
+    <li>REQUEST_SYSCALL_INTERCEPT to intercept the ‘syscall’ argument</li>
+    <li>REQUEST_SYSCALL_RELEASE to de-intercept the ‘syscall’ argument</li>
+    <li>REQUEST_START_MONITORING to start monitoring for a specific ‘pid’ whenever it issues a ‘syscall’</li>
+    <li>REQUEST_STOP_MONITORING to stop monitoring for a specific ‘pid’</li>
+</ul></p>
+
+<p>Here is the given starter code to handle all these parameters
+<img src="/img/main.png" width=80%/></p>
+
+<p>We will be controlling the functionality of our module using hijacked syscall under index 0 - <a href="https://syscalls.kernelgrok.com/">sys_restart_syscall</a>. The reason for overwriting this particular one is that it should leave the system mostly functional.</p>
+
+<p>We were also given some really good structs to handle all the PID monitoring.
+<img src="/img/structs.png" width=80%/></p>
+
+<p>Finally we need to account for the error of exiting a process while it&rsquo;s being monitored. For this we have the my_exit_group method that will remove that PID from the monitored group then call the original exit_group method.
+<img src="/img/myexit.png" width=90%/></p>
+
+<p><h3><b>Final Thoughts</b></h3>
+I had a really good time working on this assignment. It took a while to understand what it is I needed to do but once I understood the concept the code would just fly out of my hands. A special thanks to my professor <a href="http://www.cs.toronto.edu/~bogdan/">Bogdan Simion</a> for writing some of the starter code and for his great teaching style.
+Check out my final project code <a href="https://github.com/marcoemartin/Hijacking-Syscall-Table">here</a>!</p>
+
               <hr>
               <div class="related-posts">
                 <h5>Related Posts</h5>

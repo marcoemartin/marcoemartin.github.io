@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>Syscall</title>
+      <title>Hijacking Syscall Table</title>
       <link>https://marcoemartin.github.io/projects/syscall/</link>
       <pubDate>Mon, 11 Sep 2017 12:10:58 -0400</pubDate>
       
       <guid>https://marcoemartin.github.io/projects/syscall/</guid>
-      <description></description>
+      <description>In my Operating Systems course we learned about Linux kernels and where then asked to hijack a basic kernel.
+Some Background Their are two kinds of processes - User mode and privileged processes. Since some commands could literally brick your computer or be used to steal personal information the OS prevents just any process to use certain commands unless they are privileged. For further detail refer to this explanation.
+The commands are further hidden by the fact that they are called internally by digits so that user processes can&amp;rsquo;t &amp;ldquo;guess&amp;rdquo;, enter the System Call Table.</description>
     </item>
     
     <item>
